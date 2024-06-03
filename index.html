@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>День Рождения</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+    body {
+      background-color: #fdbf00;
+    }
+    .card {
+      width: 740px;
+      height: 400px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      -webkit-perspective: 1200px;
+      perspective: 1200px;
+      transition: 1s;
+    }
+    .card:hover {
+      transform: rotate(-5deg);
+    }
+    .card:hover .outside {
+      transform: rotateY(-130deg);
+    }
+    .outside,
+    .inside {
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 50.1%;
+    }
+    .inside {
+      background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+      line-height: 3;
+      padding: 0 0px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      left: 50%;
+    }
+    .outside {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      z-index: 1;
+      transform-origin: left;
+      transition: 2s;
+      cursor: pointer;
+    }
+    .front,
+    .back {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: rotateX(0deg);
+    }
+    .front {
+      background-color: #ffffff;
+    }
+    .back {
+      transform: rotateY(180deg);
+      background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+    }
+    .gold-text {
+      color: #ffd700;
+    }
+    .montecarlo-regular {
+      font-family: "MonteCarlo", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+  </style>
+</head>
+<body class="bg-green-400 flex items-center justify-center h-screen p-4">
+   <div class="card rounded-lg">
+      <div class="outside rounded-lg">
+        <div class="front bg-pink-500">
+          <div class="bg-pink-500 max-w-sm mx-auto bg-white overflow-hidden">
+            <div class="text-center p-8 bg-pink-500">
+              <h1 class="text-8xl rotate-12 font-bold gold-text montecarlo-regular">Happy</h1>
+              <h1 class="text-8xl rotate-12 font-bold gold-text montecarlo-regular">Birthday!</h1>
+            </div>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+      <div class="inside text-sm leading-tight overflow-y-auto p-2">
+        <p>Хочу поздравить тебя с этим волшебным днем и пожелать тебе море радости, счастья и ярких впечатлений! Несмотря на то, что мы с тобой недавно начали общаться, я чувствую, что наше общение приносит мне массу положительных эмоций и радости. Я уверен, что наша дружба только начинается, и у нас впереди много незабываемых моментов.</p>
+        <p>С днем рождения еще раз! Желаю тебе счастья, здоровья, исполнения желаний и крепкой дружбы! </p>
+        <h1>&#127873;</h1>
+      </div>
+    </div>
+</body>
+</html>
